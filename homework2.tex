@@ -1,0 +1,446 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}  % 用于支持 \mathbb{Z} 等符号
+\begin{document}
+	\section{}
+	\subsection{}
+	
+	\[
+	\lim_{x \to 1} \left( \frac{1}{1 - x} - \frac{3}{1 - x^3} \right)
+	\]
+	
+	\[
+	= \lim_{x \to 1} \left( \frac{1}{1 - x} - \frac{3}{(1 - x)(1 + x + x^2)} \right)
+	\]
+	
+	\[
+	= \lim_{x \to 1} \frac{1 + x + x^2 - 3}{(1 - x)(1 + x + x^2)}
+	\]
+	
+	\[
+	= \lim_{x \to 1} \frac{x^2 + x - 2}{(1 - x)(1 + x + x^2)}
+	\]
+	
+	\[
+	= \lim_{x \to 1} \frac{(x - 1)(x + 2)}{(1 - x)(1 + x + x^2)}
+	\]
+	
+	\[
+	= \lim_{x \to 1} \frac{-(x + 2)}{1 + x + x^2}
+	\]
+	
+	\[
+	= \frac{-(1 + 2)}{1 + 1 + 1^2} = \frac{-3}{3} = 	\boxed{-1}
+	\]
+	
+	
+	\subsection{}
+	\[
+	\lim_{x \to \infty} \left( \sqrt{x^2 + x} - \sqrt{x^2 - x} \right)
+	\]
+	
+	\[
+	= \lim_{x \to \infty} \frac{\left( \sqrt{x^2 + x} - \sqrt{x^2 - x} \right)\left( \sqrt{x^2 + x} + \sqrt{x^2 - x} \right)}{\sqrt{x^2 + x} + \sqrt{x^2 - x}}
+	\]
+	
+	\[
+	= \lim_{x \to \infty} \frac{(x^2 + x) - (x^2 - x)}{\sqrt{x^2 + x} + \sqrt{x^2 - x}}
+	\]
+	
+	\[
+	= \lim_{x \to \infty} \frac{x^2 + x - x^2 + x}{\sqrt{x^2 + x} + \sqrt{x^2 - x}} = \lim_{x \to \infty} \frac{2x}{\sqrt{x^2 + x} + \sqrt{x^2 - x}}
+	\]
+	
+	\[
+	= \lim_{x \to \infty} \frac{2x}{\sqrt{x^2(1 + \frac{1}{x})} + \sqrt{x^2(1 - \frac{1}{x})}}
+	\]
+	
+	\[
+	= \lim_{x \to \infty} \frac{2x}{x\left( \sqrt{1 + \frac{1}{x}} + \sqrt{1 - \frac{1}{x}} \right)}
+	\]
+	
+	\[
+	= \lim_{x \to \infty} \frac{2}{\sqrt{1 + \frac{1}{x}} + \sqrt{1 - \frac{1}{x}}}
+	\]
+	
+	\[
+	= \frac{2}{\sqrt{1 + 0} + \sqrt{1 - 0}} = \frac{2}{1 + 1} = \frac{2}{2} = \boxed{1}
+	\]
+	
+	
+	\section{}	
+	
+	
+	\subsection{}	
+	\[
+	f(x) = \frac{x - 1}{x^2 + x - 2}
+	\]
+	
+	\textbf{Step 1: Set the denominator equal to zero}
+	
+	The discontinuities occur when the denominator is zero, so we solve:
+	
+	\[
+	x^2 + x - 2 = 0
+	\]
+	
+	\textbf{Step 2: Factor the quadratic equation}
+	
+	We factor the quadratic equation:
+	
+	\[
+	x^2 + x - 2 = (x - 1)(x + 2)
+	\]
+	
+	Thus, the denominator is zero at \(x = 1\) and \(x = -2\).
+	
+	\textbf{Step 3: Check the type of discontinuities}
+	
+	1. At \(x = 1\), the numerator \(x - 1\) is also zero, so we can simplify the function:
+	
+	\[
+	\frac{x - 1}{(x - 1)(x + 2)} = \frac{1}{x + 2} \quad \text{(when \(x \neq 1\))}
+	\]
+	
+	Thus, \(x = 1\) is a \textit{removable discontinuity}.
+	
+	2. At \(x = -2\), the numerator is non-zero (\(x - 1 = -3\)), and the denominator is zero. Therefore, \(x = -2\) is an \textit{infinite discontinuity}.
+	
+	\textbf{Step 4: Conclusion}
+	
+	The function \( f(x) = \frac{x - 1}{x^2 + x - 2} \) has two discontinuities:
+	
+	\[
+	\boxed{x = 1 \text{ (removable discontinuity)}, \quad x = -2 \text{ (infinite discontinuity)}}
+	\]
+	
+	\subsection{}	
+	
+	\[
+	f(x) = 
+	\begin{cases} 
+		x - 1 & \text{if } x \leq 1 \\
+		3 - x & \text{if } x > 1
+	\end{cases}
+	\]
+	
+	\textbf{Step 1: Check the continuity at \(x = 1\)}
+	
+	We need to check the left-hand limit, the right-hand limit, and the function value at \(x = 1\).
+	
+	\textbf{1.1 Left-hand limit:}
+	
+	When \(x \to 1^{-}\), the function is \(f(x) = x - 1\), so:
+	
+	\[
+	\lim_{x \to 1^{-}} f(x) = \lim_{x \to 1^{-}} (x - 1) = 1 - 1 = 0
+	\]
+	
+	\textbf{1.2 Right-hand limit:}
+	
+	When \(x \to 1^{+}\), the function is \(f(x) = 3 - x\), so:
+	
+	\[
+	\lim_{x \to 1^{+}} f(x) = \lim_{x \to 1^{+}} (3 - x) = 3 - 1 = 2
+	\]
+	
+	\textbf{1.3 Function value:}
+	
+	Since \(x = 1\) is in the domain where \(x \leq 1\), we use \(f(x) = x - 1\), so:
+	
+	\[
+	f(1) = 1 - 1 = 0
+	\]
+	
+	\textbf{1.4 Conclusion:}
+	
+	- Left-hand limit: \(\lim_{x \to 1^{-}} f(x) = 0\)
+	- Right-hand limit: \(\lim_{x \to 1^{+}} f(x) = 2\)
+	- Function value: \(f(1) = 0\)
+	
+	Since the left-hand limit and the right-hand limit are not equal, there is a jump discontinuity at \(x = 1\).
+	
+	\textbf{Step 2: Conclusion}
+	
+	- \textbf{Discontinuity}: \(x = 1\)
+	- \textbf{Discontinuity type}: Jump discontinuity
+	
+		
+	\subsection{}
+We are given the function \( f(x) = \frac{x}{\tan(x)} \), and we need to analyze the potential discontinuities of this function.
+
+\textbf{Step 1: Identify the potential discontinuities}
+
+The function \( f(x) = \frac{x}{\tan(x)} \) may have discontinuities where the denominator \( \tan(x) \) is zero or undefined. This occurs at two types of points:
+\begin{itemize}
+	\item \( \tan(x) = 0 \) at \( x = n\pi \), where \( n \in \mathbb{Z} \) (i.e., for any integer \( n \)).
+	\item \( \tan(x) \) is undefined at \( x = n\pi + \frac{\pi}{2} \), where \( n \in \mathbb{Z} \), because \( \cos(x) = 0 \) at these points (and division by zero occurs in the tangent function).
+\end{itemize}
+
+Thus, the potential discontinuities occur at:
+\[
+x = n\pi \quad \text{and} \quad x = n\pi + \frac{\pi}{2}, \quad \text{where} \ n \in \mathbb{Z}.
+\]
+
+\textbf{Step 2: Analyze the case at \( x = 0 \)}
+
+At \( x = 0 \), the function is of the form \( \frac{0}{0} \), which is undefined. Thus, we need to analyze the limit of \( f(x) \) as \( x \to 0 \). Using the approximation \( \tan(x) \approx x \) near \( x = 0 \), we get:
+\[
+f(x) \approx \frac{x}{x} = 1.
+\]
+Therefore, we have:
+\[
+\lim_{x \to 0} \frac{x}{\tan(x)} = 1.
+\]
+Although \( f(x) \) is not defined at \( x = 0 \), the limit exists and is equal to 1. Hence, \( x = 0 \) is a \textit{removable discontinuity}, and the function can be redefined as \( f(0) = 1 \) to make it continuous.
+
+\textbf{Step 3: Analyze the type of discontinuities at \( x = n\pi \)}
+
+For other points \( x = n\pi \), where \( n \neq 0 \), we observe that \( \tan(x) = 0 \) at these points, and the function tends to infinity as \( x \to n\pi \). Therefore, the function has an \textit{infinite discontinuity} at these points.
+
+\textbf{Step 4: Analyze the type of discontinuities at \( x = n\pi + \frac{\pi}{2} \)}
+
+At \( x = n\pi + \frac{\pi}{2} \), the function \( \tan(x) \) is undefined because \( \cos(x) = 0 \). However, as \( x \to n\pi + \frac{\pi}{2} \), we know that \( \tan(x) \to \infty \) (or negative infinity), and the function \( f(x) \) tends to 0:
+\[
+\lim_{x \to n\pi + \frac{\pi}{2}} \frac{x}{\tan(x)} = 0.
+\]
+Thus, \( x = n\pi + \frac{\pi}{2} \) is a \textit{removable discontinuity}.
+
+\textbf{Step 5: Conclusion}
+
+The function \( f(x) = \frac{x}{\tan(x)} \) has the following types of discontinuities:
+\begin{itemize}
+	\item At \( x = 0 \), the function has a \textit{removable discontinuity}, which can be fixed by defining \( f(0) = 1 \).
+	\item At \( x = n\pi \) for \( n \in \mathbb{Z}, n \neq 0 \), the function has \textit{infinite discontinuities}.
+	\item At \( x = n\pi + \frac{\pi}{2} \) for \( n \in \mathbb{Z} \), the function has \textit{removable discontinuities}.
+\end{itemize}
+	\section{}
+
+	\subsection{}
+
+\[
+\lim_{x \to 0} \left( e^x + \cos(x) \right)
+\]
+
+\[
+= \lim_{x \to 0} e^x + \lim_{x \to 0} \cos(x)
+\]
+
+\[
+= e^0 + \cos(0)
+\]
+
+\[
+= 1 + 1
+\]
+
+\[
+=\boxed{2}
+\]
+
+
+
+	\subsection{}
+
+\[
+\lim_{x \to 0} \ln\left( \frac{\sin(x)}{x} \right) = \ln\left( \lim_{x \to 0} \frac{\sin(x)}{x} \right)
+\]
+
+\[
+= \ln(1) = \boxed{0}
+\]
+
+\subsection{}
+\[
+\lim_{x \to \infty} e^{\frac{1}{x}}
+\]
+
+\[
+= e^{\lim_{x \to \infty} \frac{1}{x}}
+\]
+
+\[
+= e^0
+\]
+
+\[
+\boxed{1}
+\]
+
+
+\subsection{}
+We are tasked with proving that the function \( f(x) = x^5 - 3x \) has at least one root in the interval \( (1, 2) \).
+
+\textbf{Step 1: Define the function}
+
+Let \( f(x) = x^5 - 3x \).
+
+\textbf{Step 2: Evaluate the function at the endpoints of the interval}
+
+\[
+f(1) = 1^5 - 3 \times 1 = 1 - 3 = -2
+\]
+\[
+f(2) = 2^5 - 3 \times 2 = 32 - 6 = 26
+\]
+
+\textbf{Step 3: Apply the Intermediate Value Theorem}
+
+The function \( f(x) = x^5 - 3x \) is a polynomial, which is continuous on the interval \( [1, 2] \). Since \( f(1) = -2 \) and \( f(2) = 26 \), and the signs of \( f(1) \) and \( f(2) \) are different (one is negative and the other is positive), by the **Intermediate Value Theorem**, there exists at least one point \( c \in (1, 2) \) such that:
+
+\[
+f(c) = 0
+\]
+
+\textbf{Conclusion}
+
+Thus, the function \( f(x) = x^5 - 3x \) has at least one root in the interval \( (1, 2) \).
+\subsection{}
+\[
+f(x) =
+\begin{cases}
+	x^2, & \text{if } x \geq 0, \\
+	-x, & \text{if } x < 0.
+\end{cases}
+\]
+
+We are asked to find the right-hand and left-hand derivatives at \( x = 0 \), and to determine whether the derivative exists at \( x = 0 \).
+
+\textbf{Step 1: Derivative for \( x \geq 0 \)}
+
+For \( x \geq 0 \), the function is \( f(x) = x^2 \). The derivative is:
+
+\[
+f'(x) = 2x, \quad \text{for} \quad x \geq 0.
+\]
+
+\textbf{Step 2: Derivative for \( x < 0 \)}
+
+For \( x < 0 \), the function is \( f(x) = -x \). The derivative is:
+
+\[
+f'(x) = -1, \quad \text{for} \quad x < 0.
+\]
+
+\textbf{Step 3: Calculate the right-hand derivative at \( x = 0 \)}
+
+The right-hand derivative is the derivative as \( x \to 0^+ \). Since for \( x \geq 0 \), we have \( f'(x) = 2x \), we calculate:
+
+\[
+f'(0^+) = \lim_{x \to 0^+} 2x = 0.
+\]
+
+\textbf{Step 4: Calculate the left-hand derivative at \( x = 0 \)}
+
+The left-hand derivative is the derivative as \( x \to 0^- \). Since for \( x < 0 \), we have \( f'(x) = -1 \), we calculate:
+
+\[
+f'(0^-) = \lim_{x \to 0^-} (-1) = -1.
+\]
+
+\textbf{Step 5: Conclusion}
+
+Since the right-hand derivative \( f'(0^+) = 0 \) and the left-hand derivative \( f'(0^-) = -1 \), the derivatives at \( x = 0 \) do not match. Therefore, the derivative of the function at \( x = 0 \) does not exist.
+\subsection{}
+\[
+f(x) =
+\begin{cases}
+	x^2, & \text{if } x \leq 1, \\
+	ax + b, & \text{if } x > 1.
+\end{cases}
+\]
+
+We are asked to find \( a \) and \( b \) such that the function is differentiable at \( x = 1 \).
+
+\textbf{Step 1: Ensure continuity at \( x = 1 \)}
+
+For the function to be continuous at \( x = 1 \), we require:
+
+\[
+\lim_{x \to 1^-} f(x) = \lim_{x \to 1^+} f(x) = f(1)
+\]
+
+We know:
+
+\[
+f(1^-) = 1^2 = 1, \quad f(1^+) = a \cdot 1 + b = a + b
+\]
+
+For continuity, we must have:
+
+\[
+a + b = 1
+\]
+
+\textbf{Step 2: Ensure differentiability at \( x = 1 \)}
+
+For the function to be differentiable at \( x = 1 \), we require:
+
+\[
+\lim_{x \to 1^-} f'(x) = \lim_{x \to 1^+} f'(x)
+\]
+
+For \( x \leq 1 \), \( f(x) = x^2 \), so:
+
+\[
+f'(x) = 2x
+\]
+
+For \( x > 1 \), \( f(x) = ax + b \), so:
+
+\[
+f'(x) = a
+\]
+
+At \( x = 1 \), we require:
+
+\[
+f'(1^-) = f'(1^+) \quad \Rightarrow \quad 2 = a
+\]
+
+Thus, \( a = 2 \).
+
+\textbf{Step 3: Solve for \( a \) and \( b \)}
+
+From the continuity condition \( a + b = 1 \) and the differentiability condition \( a = 2 \), we solve for \( b \):
+
+\[
+2 + b = 1 \quad \Rightarrow \quad b = -1
+\]
+
+\textbf{Conclusion}
+
+Thus, the values of \( a \) and \( b \) are:
+
+\[
+a = 2, \quad b = -1
+\]
+
+\section{}
+\subsection{}
+
+\[
+f(x) = \sqrt{\sqrt{\sqrt{x}}}
+\]
+
+First, we rewrite the expression as:
+
+\[
+f(x) = \sqrt{\sqrt{\sqrt{x}}} = x^{1/8}
+\]
+
+Now, we differentiate \( f(x) = x^{1/8} \) using the power rule:
+
+\[
+f'(x) = \frac{d}{dx} \left( x^{1/8} \right) = \frac{1}{8} x^{\frac{1}{8} - 1} = \frac{1}{8} x^{-\frac{7}{8}}
+\]
+
+Thus, the derivative is:
+
+\[
+f'(x) = \frac{1}{8} x^{-\frac{7}{8}}
+\]
+
+
+
+\end{document}
